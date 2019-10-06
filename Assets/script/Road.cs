@@ -6,9 +6,9 @@ public class Road : MonoBehaviour
 {
   Transform thisTransform;
   Rigidbody rb;
-  [SerializeField] float roadSpeed;
   [SerializeField] float startPosX;
   [SerializeField] float endPosX;
+  [SerializeField] float roadlength;
   [SerializeField] Transform road;
   Vector3 newV;
   void Start()
@@ -25,14 +25,14 @@ public class Road : MonoBehaviour
   
   void Reposition()
   {
-      thisTransform.position=new Vector3(road.position.x+100,0,0);    
+      thisTransform.position=new Vector3(road.position.x+roadlength,0,0);    
       StartCoroutine(Move());
   }  
   IEnumerator Move()
   {
     while(thisTransform.position.x!=endPosX)
     {
-      thisTransform.position= Vector3.MoveTowards(thisTransform.position,newV,roadSpeed);
+      thisTransform.position= Vector3.MoveTowards(thisTransform.position,newV,Params.CarSpeed);
       yield return null;
       if(thisTransform.position.x==endPosX)
       {

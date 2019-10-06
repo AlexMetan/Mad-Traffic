@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Car
     - Road
+    - Spawn
+    - Traffic
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -32,11 +34,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 64
-      Script: {instanceID: 0}
-    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
@@ -45,8 +43,6 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
-      Script: {instanceID: 0}
-    - Class: 111
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 9324}
@@ -61,18 +57,16 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9380}
     - Class: 114
-      Script: {instanceID: 9860}
+      Script: {instanceID: 9862}
     - Class: 114
       Script: {instanceID: 10328}
+    - Class: 114
+      Script: {instanceID: 13874}
+    - Class: 114
+      Script: {instanceID: 13880}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -579,7 +573,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: ecc9b7b0c15711284235569922b384fc
+      Hash: ef6bebaa530c20295c0849989e804160
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Car
@@ -607,12 +601,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: ce9df81bbe7845a60b1b25fc5b5e8926
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnRoad
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
@@ -693,7 +681,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: c825d4e2ba06210fe01efcd17b594803
+      Hash: dc516416eef2e2ba101ea4e8ef14e4b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Road
@@ -739,8 +727,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Traffic
+  - hash:
+      serializedVersion: 2
+      Hash: a8474dc9fc3d15aa3b67e5d1f328f224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawn
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: "C:/Users/sasha/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/ANDROID GAME/MadRacing.apk"
+  playerPath: C:/Users/AlexMetan/Desktop/madTraffiv.apk

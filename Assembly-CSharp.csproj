@@ -56,8 +56,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\script\Car.cs" />
+     <Compile Include="Assets\script\Params.cs" />
      <Compile Include="Assets\script\Road.cs" />
-     <Compile Include="Assets\script\SpawnRoad.cs" />
+     <Compile Include="Assets\script\Spawn.cs" />
+     <Compile Include="Assets\script\Traffic.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/AlexMetan/Desktop/race/Mad-Traffic/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
