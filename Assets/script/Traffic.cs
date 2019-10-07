@@ -8,7 +8,7 @@ public class Traffic : MonoBehaviour
     void Start()
     {
         thisTransform=transform;
-        newPosition=new Vector3(-100,thisTransform.position.y,thisTransform.position.z);
+        newPosition=new Vector3(-20,thisTransform.position.y,thisTransform.position.z);
         CheckDirection();
     }
     void Update()

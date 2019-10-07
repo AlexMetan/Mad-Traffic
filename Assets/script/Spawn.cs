@@ -6,12 +6,12 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] float [] trafficPositionsZ;
     [SerializeField] GameObject [] trafficPrefab;
-    List <Transform> trafficList;
+    List <GameObject> trafficList;
     float time;
 
     void Start()
     {
-        trafficList = new List<Transform>();
+        trafficList = new List<GameObject>();
     }
     void Update()
     {
@@ -24,12 +24,13 @@ public class Spawn : MonoBehaviour
         int randPrefab = Random.Range(0,trafficPrefab.Length);
         Vector3 trafficStartPosition = new Vector3(100,0,trafficPositionsZ[randPos]);
         GameObject carTraffic=Instantiate(trafficPrefab[randPrefab],trafficStartPosition,Quaternion.identity);
+        trafficList.Add(carTraffic);
     }
     void CheckTrafficPosition()
     {
         for(byte i = 0;i<trafficList.Count;i++)
         {
-            if(trafficList[i].transform.position.x<=-5)
+            if(trafficList[i].transform.position.x<=-15)
             {
                 Destroy(trafficList[i]);
                 trafficList.RemoveAt(i);
