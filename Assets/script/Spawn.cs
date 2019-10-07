@@ -30,7 +30,7 @@ public class Spawn : MonoBehaviour
     {
         for(byte i = 0;i<trafficList.Count;i++)
         {
-            if(trafficList[i].transform.position.x<=-15)
+            if(trafficList[i].transform.position.x<=-15||trafficList[i].transform.position.x<=-120)
             {
                 Destroy(trafficList[i]);
                 trafficList.RemoveAt(i);
@@ -40,7 +40,7 @@ public class Spawn : MonoBehaviour
     void TimeToSpawn()
     {
         time+=Time.deltaTime;
-        if(time>=.5f)
+        if(time>=2f)
         {
             SpawnTraffic();
             time=0;

@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\script\ButtonColor.cs" />
      <Compile Include="Assets\script\Car.cs" />
+     <Compile Include="Assets\script\MainUi.cs" />
      <Compile Include="Assets\script\Params.cs" />
      <Compile Include="Assets\script\Road.cs" />
      <Compile Include="Assets\script\Spawn.cs" />

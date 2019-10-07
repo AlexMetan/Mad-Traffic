@@ -25,12 +25,11 @@ public class Car : MonoBehaviour
         RotateWheel();
         if(buttonStat!=0)
             Move();
-        if(torqueStat!=0)
-            Torque();
+        Torque();
         RotateCar(buttonStat);
         WheelRotation(-15);
         SetMinMaxSpeed();
-       
+        SetDistance();       
     }
     void RotateWheel()
     {
@@ -68,8 +67,16 @@ public class Car : MonoBehaviour
     }
     void Torque()
     {
-        currentSpeed+=0.01f*torqueStat;
-        Params.CarSpeed=currentSpeed;
+        if(torqueStat!=0)
+        {
+            currentSpeed+=0.01f*torqueStat;
+            Params.CarSpeed=currentSpeed;
+        }
+        else 
+        {
+            currentSpeed-=0.00025f;
+            Params.CarSpeed=currentSpeed;
+        }
     }
     void SetMinMaxSpeed()
     {
@@ -78,5 +85,9 @@ public class Car : MonoBehaviour
     void SetMinMaxPositionZ()
     {
         currentZ=Mathf.Clamp(currentZ,minZ,maxZ);
+    }
+    void SetDistance()
+    {
+        Params.DistanceKm+=Params.GetSpeed()*0.00001f;
     }
 }

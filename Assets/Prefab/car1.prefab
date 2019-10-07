@@ -119,7 +119,6 @@ GameObject:
   - component: {fileID: 3061282376476195643}
   - component: {fileID: 3061282376476195644}
   - component: {fileID: 3061282376476195645}
-  - component: {fileID: 3061282376476195642}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -186,20 +185,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3061282376476195642
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3061282376476195640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: -5495902117074765545, guid: f64483713fea78b4ea64ce9a59042ccd, type: 3}
 --- !u!1 &3061282376817551383
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,9 +550,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3061282377976043536}
   - component: {fileID: 3061282377976043537}
+  - component: {fileID: 5214983268333482053}
+  - component: {fileID: 8952567980538035105}
+  - component: {fileID: 6487178020069069625}
   m_Layer: 0
-  m_Name: car1 (1)
-  m_TagString: Untagged
+  m_Name: car1
+  m_TagString: Traffic Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,7 +567,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3061282377976043534}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.09, y: 0, z: -0.7}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
@@ -603,6 +591,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be26f76b3571bc24395277298d260b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &5214983268333482053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061282377976043534}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!65 &8952567980538035105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061282377976043534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.081046, y: 2.1409268, z: 2.6402738}
+  m_Center: {x: -1.4240439, y: -0.07046342, z: 0.010068019}
+--- !u!65 &6487178020069069625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3061282377976043534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6089249, y: 1, z: 2.41013}
+  m_Center: {x: 1.8227005, y: 0, z: 0.0032037497}
 --- !u!1 &3061282378095944102
 GameObject:
   m_ObjectHideFlags: 0
