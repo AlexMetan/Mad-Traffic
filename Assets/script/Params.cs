@@ -1,7 +1,7 @@
 ﻿
 public static class Params 
 {
-    private static float carSpeed=0.25f;
+    private static float carSpeed=0.55f;
     public static float CarSpeed { get => carSpeed; set => carSpeed = value; }
 
     private static float distanceKm=0;

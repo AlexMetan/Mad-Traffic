@@ -22,12 +22,7 @@ public class Traffic : MonoBehaviour
     }
     void TrafficMove()
     {
-        if(forwardDirection)
-        {
-            thisTransform.position = Vector3.MoveTowards(thisTransform.position,newPosition,Params.CarSpeed/currentSpeed);
-        }
-        else 
-            thisTransform.position = Vector3.MoveTowards(thisTransform.position,newPosition,Params.CarSpeed*currentSpeed);
+        thisTransform.position = Vector3.MoveTowards(thisTransform.position,newPosition,Params.CarSpeed*currentSpeed);
     }
     void CheckDirection()
     {
@@ -52,7 +47,7 @@ public class Traffic : MonoBehaviour
     void RandomSpeed()
     {
         if(forwardDirection)
-            speed=Random.Range(5,14);
+            speed=Random.Range(.01f,.5f);
         else 
             speed=Random.Range(1.2f,3);
         currentSpeed=speed;
@@ -77,11 +72,11 @@ public class Traffic : MonoBehaviour
         if(!carCrash)
         {
             if(carFromTheFront)
-                currentSpeed=5f;
+                currentSpeed=.5f;
             else
                 currentSpeed=speed;
         }
         else
-            currentSpeed=1;        
-    }
+            currentSpeed=Params.CarSpeed;        
+    }   
 }
