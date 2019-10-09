@@ -61,6 +61,7 @@
      <Compile Include="Assets\script\Params.cs" />
      <Compile Include="Assets\script\Road.cs" />
      <Compile Include="Assets\script\Spawn.cs" />
+     <Compile Include="Assets\script\StartGame.cs" />
      <Compile Include="Assets\script\Traffic.cs" />
      <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Debug\Waveform.compute" />
