@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Traffic Car
   - MainCar
+  - CrashCollider
   layers:
   - Default
   - TransparentFX

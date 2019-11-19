@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Road : MonoBehaviour
@@ -18,11 +17,6 @@ public class Road : MonoBehaviour
     newV= new Vector3(endPosX,0,0);
     StartCoroutine(Move());
   }
-  void Update()
-  {
-    
-  }
-  
   void Reposition()
   {
       thisTransform.position=new Vector3(road.position.x+roadlength,0,0);    
@@ -32,14 +26,18 @@ public class Road : MonoBehaviour
   {
     while(thisTransform.position.x!=endPosX)
     {
-      thisTransform.position= Vector3.MoveTowards(thisTransform.position,newV,Params.CarSpeed);
-      yield return null;
-      if(thisTransform.position.x==endPosX)
+      if(!Params.GamePaused)
       {
-        Reposition();
-        
-        yield break;
+        thisTransform.position= Vector3.MoveTowards(thisTransform.position,newV,Params.CarSpeed);
+        yield return null;
+        if(thisTransform.position.x==endPosX)
+        {
+          Reposition();
+          
+          yield break;
+        }
       }
+      else  yield return null;
     }
     
   }

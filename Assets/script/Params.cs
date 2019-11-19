@@ -1,11 +1,20 @@
-﻿
-public static class Params 
+﻿public static class Params 
 {
+    private static float defSpeed=0.55f;
     private static float carSpeed=0.55f;
-    public static float CarSpeed { get => carSpeed; set => carSpeed = value; }
-
+    private static bool inMenu=true;
+    private static bool carCrashed;
     private static float distanceKm=0;
+    private static bool blockMovement;
+    private static bool gamePaused=false;
+    
+    public static float CarSpeed { get => carSpeed; set => carSpeed = value; }
     public static float DistanceKm { get => distanceKm; set => distanceKm = value; }
+    public static float DefSpeed { get => defSpeed; set => defSpeed = value; }
+    public static bool InMenu { get => inMenu; set => inMenu = value; }
+    public static bool CarCrashed { get => carCrashed; set => carCrashed = value; }
+    public static bool BlockMovement { get => blockMovement; set => blockMovement = value; }
+    public static bool GamePaused { get => gamePaused; set => gamePaused = value; }
 
     public static float GetSpeed()
     {

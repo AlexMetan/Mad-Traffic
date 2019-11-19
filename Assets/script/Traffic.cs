@@ -17,8 +17,11 @@ public class Traffic : MonoBehaviour
     }
     void Update()
     {
-        TrafficMove();
-        CheckCarState();
+        if(!Params.GamePaused)
+        {
+            TrafficMove();
+            CheckCarState();
+        }
     }
     void TrafficMove()
     {

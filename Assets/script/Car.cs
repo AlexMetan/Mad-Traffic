@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Car : MonoBehaviour
 {
@@ -22,14 +21,18 @@ public class Car : MonoBehaviour
     }
     void Update()
     {
-        RotateWheel();
-        if(buttonStat!=0)
-            Move();
-        Torque();
-        RotateCar(buttonStat);
-        WheelRotation(-15);
-        SetMinMaxSpeed();
-        SetDistance();       
+        if(!Params.GamePaused)
+        {
+            RotateWheel();
+            if(buttonStat!=0)
+                Move();
+            Torque();
+            RotateCar(buttonStat);
+            WheelRotation(-15);
+            SetMinMaxSpeed();
+            if(!Params.CarCrashed&&!Params.InMenu)
+                SetDistance();      
+        }         
     }
     void RotateWheel()
     {
@@ -47,7 +50,10 @@ public class Car : MonoBehaviour
     }
     public void SetStatement(int value)
     {
-        buttonStat=value;
+        if(!Params.BlockMovement)
+            buttonStat=value;
+        else 
+            buttonStat=0;
     }
     public void SetStatementTorque(int value)
     {
@@ -67,15 +73,23 @@ public class Car : MonoBehaviour
     }
     void Torque()
     {
-        if(torqueStat!=0)
+        if(!Params.InMenu&&!Params.CarCrashed)
         {
-            currentSpeed+=0.01f*torqueStat;
-            Params.CarSpeed=currentSpeed;
+            if(torqueStat!=0)
+            {
+                currentSpeed+=0.01f*torqueStat;
+                Params.CarSpeed=currentSpeed;
+            }
+            else 
+            {
+                currentSpeed-=0.00025f;
+                Params.CarSpeed=currentSpeed;
+            }
         }
         else 
         {
-            currentSpeed-=0.00025f;
-            Params.CarSpeed=currentSpeed;
+            Params.CarSpeed=Params.DefSpeed;
+            currentSpeed=Params.DefSpeed;
         }
     }
     void SetMinMaxSpeed()
