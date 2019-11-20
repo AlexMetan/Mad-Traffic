@@ -28,20 +28,20 @@ public class ShopScrolling : MonoBehaviour
     public void NextCar()
     {
         if(currentCar<shopCars.Length-1)
-        {
             currentCar++;
-        }
+        else 
+            currentCar=0;
         DeactivatedAllCars();
         EnableCar();
     }
     public void PreviousCar()
     {
         if(currentCar>0)
-        {
             currentCar--;
-            DeactivatedAllCars();
-            EnableCar();
-        }
+        else 
+            currentCar=shopCars.Length-1;
+        DeactivatedAllCars();
+        EnableCar();
     }    
     void EnableCar()
     {

@@ -8,15 +8,13 @@ ScriptsOnlyBuild:
     - PauseAnimation
     - Road
     - Shop
+    - ShopCars
     - ShopScrolling
     - Spawn
     - StartGame
     - Traffic
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.ButtonEditor
-    - UnityEditor.UI.ImageEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.EventTrigger
@@ -65,43 +63,45 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9314}
+      Script: {instanceID: 9316}
     - Class: 114
-      Script: {instanceID: 9328}
+      Script: {instanceID: 9330}
     - Class: 114
-      Script: {instanceID: 9432}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9434}
+      Script: {instanceID: 9436}
     - Class: 114
-      Script: {instanceID: 9440}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9442}
+      Script: {instanceID: 9444}
     - Class: 114
       Script: {instanceID: 9446}
     - Class: 114
-      Script: {instanceID: 9454}
+      Script: {instanceID: 9450}
     - Class: 114
-      Script: {instanceID: 9490}
+      Script: {instanceID: 9458}
     - Class: 114
-      Script: {instanceID: 9492}
+      Script: {instanceID: 9494}
     - Class: 114
-      Script: {instanceID: 10040}
+      Script: {instanceID: 9496}
     - Class: 114
-      Script: {instanceID: 10102}
+      Script: {instanceID: 10044}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10106}
     - Class: 114
-      Script: {instanceID: 10430}
+      Script: {instanceID: 10396}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10434}
     - Class: 114
-      Script: {instanceID: 10568}
+      Script: {instanceID: 10560}
     - Class: 114
-      Script: {instanceID: 10732}
+      Script: {instanceID: 10572}
     - Class: 114
-      Script: {instanceID: 22362}
+      Script: {instanceID: 10676}
     - Class: 114
-      Script: {instanceID: 93710}
+      Script: {instanceID: 10738}
+    - Class: 114
+      Script: {instanceID: 27212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -185,6 +185,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: c12bd5466acbf048f216f70561e652b0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopScrolling
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -847,6 +853,12 @@ ScriptsOnlyBuild:
     className: Road
   - hash:
       serializedVersion: 2
+      Hash: b79bd3a219264f968e94e5b01f147046
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shop
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -913,16 +925,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: c12bd5466acbf048f216f70561e652b0
+      Hash: 0a1753136ab566887d53e5433a1ce1cf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ShopScrolling
-  - hash:
-      serializedVersion: 2
-      Hash: b79bd3a219264f968e94e5b01f147046
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shop
+    className: ShopCars
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

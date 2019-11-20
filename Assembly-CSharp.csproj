@@ -63,6 +63,7 @@
      <Compile Include="Assets\script\PauseAnimation.cs" />
      <Compile Include="Assets\script\Road.cs" />
      <Compile Include="Assets\script\Shop.cs" />
+     <Compile Include="Assets\script\ShopCars.cs" />
      <Compile Include="Assets\script\ShopScrolling.cs" />
      <Compile Include="Assets\script\Spawn.cs" />
      <Compile Include="Assets\script\StartGame.cs" />
