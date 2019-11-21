@@ -7,7 +7,7 @@
     private static float distanceKm=0;
     private static bool blockMovement;
     private static bool gamePaused=false;
-    
+    private static int[] carPrice={0,5000,10000};
     public static float CarSpeed { get => carSpeed; set => carSpeed = value; }
     public static float DistanceKm { get => distanceKm; set => distanceKm = value; }
     public static float DefSpeed { get => defSpeed; set => defSpeed = value; }
@@ -15,6 +15,7 @@
     public static bool CarCrashed { get => carCrashed; set => carCrashed = value; }
     public static bool BlockMovement { get => blockMovement; set => blockMovement = value; }
     public static bool GamePaused { get => gamePaused; set => gamePaused = value; }
+    public static int[] CarPrice { get => carPrice; set => carPrice = value; }
 
     public static float GetSpeed()
     {

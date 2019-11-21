@@ -5,7 +5,7 @@ public class ShopCars : MonoBehaviour
 {
     [Header("Car Config")]
     [SerializeField][Range(0,375)] int[] carConfig;
-    [Header("Images")]
+    [Header("UI")]
     [SerializeField] Image[] carConfigImage;
     [Header("GameObject")]
     [SerializeField] GameObject locked; 
@@ -15,13 +15,14 @@ public class ShopCars : MonoBehaviour
     [Header("Value")]
     [SerializeField] int priceValue;
     [SerializeField] int carId;
-
+    int currentMoney;
+    
     [SerializeField] bool carPurchased;
     void Start()
     {
         SetConfig();
         if(carId!=0)
-            carPurchased=CarInGarage();
+            CarInGarage();
         CarLock();
     }
     void SetConfig()
@@ -31,7 +32,7 @@ public class ShopCars : MonoBehaviour
             carConfigImage[i].GetComponent<RectTransform>().sizeDelta=new Vector2(carConfig[i],20);
         }
     }
-    void CarLock()
+    public void CarLock()
     {
         if(carPurchased)
         {
@@ -45,13 +46,13 @@ public class ShopCars : MonoBehaviour
         locked.SetActive(value);
         btnTake.SetActive(!value);
     }
-    bool CarInGarage()
+    public void CarInGarage()
     {
         string carName="carShop"+carId;
-        if(PlayerPrefs.GetInt("carName")==1)
+        if(PlayerPrefs.GetInt(carName)==1)
         {
-            return true;
+            carPurchased=true;
         }
-        else return false;
-    }
+        else carPurchased=false;
+    }    
 }

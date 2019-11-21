@@ -1,29 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShopScrolling : MonoBehaviour
 {
     [SerializeField] GameObject[] shopCars;
     int currentCar=0;
-    GameObject [] carItems;
     void Start()
     {
-        carItems=new GameObject[shopCars.Length];
-        ShowCars();
         DeactivatedAllCars();
         EnableCar();
-    }
-
-    // Update is called once per frame
-   
-    void ShowCars()
-    {
-        for(byte i=0;i<shopCars.Length;i++)
-        {
-            GameObject newBox=Instantiate(shopCars[i],transform.position,Quaternion.identity,transform);
-            carItems[i]=newBox;
-        }
     }
     public void NextCar()
     {
@@ -45,11 +29,11 @@ public class ShopScrolling : MonoBehaviour
     }    
     void EnableCar()
     {
-        carItems[currentCar].SetActive(true);
+        shopCars[currentCar].SetActive(true);
     }
     void DeactivatedAllCars()
     {
-        foreach(GameObject obj in carItems)
+        foreach(GameObject obj in shopCars)
         {
             obj.SetActive(false);
         }

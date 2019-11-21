@@ -905,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &132801839366200208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -955,7 +955,6 @@ MonoBehaviour:
   priceObj: {fileID: 132801838670881080}
   priceValue: 5000
   carId: 1
-  priceText: {fileID: 132801838670881082}
   carPurchased: 0
 --- !u!1 &132801839495132109
 GameObject:

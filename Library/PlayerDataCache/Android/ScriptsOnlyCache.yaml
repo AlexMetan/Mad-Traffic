@@ -85,23 +85,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9496}
     - Class: 114
-      Script: {instanceID: 10044}
+      Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 10106}
+      Script: {instanceID: 10046}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10108}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 10436}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 10676}
+      Script: {instanceID: 10574}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10678}
     - Class: 114
-      Script: {instanceID: 27212}
+      Script: {instanceID: 10740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -643,6 +643,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 0a1753136ab566887d53e5433a1ce1cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShopCars
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -841,7 +847,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 7f6ff3746ffbccd32fd62b36554044ce
+      Hash: 98336b6b320cf37958d140a9c1360145
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainUi
@@ -853,7 +859,7 @@ ScriptsOnlyBuild:
     className: Road
   - hash:
       serializedVersion: 2
-      Hash: b79bd3a219264f968e94e5b01f147046
+      Hash: fe42748d804388aa5d1d8b1f720b430a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shop
@@ -923,12 +929,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0a1753136ab566887d53e5433a1ce1cf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ShopCars
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

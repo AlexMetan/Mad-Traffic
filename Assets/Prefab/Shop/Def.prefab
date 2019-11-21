@@ -559,7 +559,6 @@ MonoBehaviour:
   priceObj: {fileID: 181502876284438258}
   priceValue: 0
   carId: 0
-  priceText: {fileID: 181502876284438256}
   carPurchased: 1
 --- !u!1 &181502876997827672
 GameObject:

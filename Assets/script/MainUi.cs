@@ -10,10 +10,12 @@ public class MainUi : MonoBehaviour
     [SerializeField] Text score;
     [SerializeField] Text menuScore;
     [SerializeField] Text timerText;
+    [SerializeField] Text shopBalance;
 
     void Start()
     {
         ReloadMenu();
+        ShowShopBalance();
     }
     void Update()
     {
@@ -53,5 +55,9 @@ public class MainUi : MonoBehaviour
     public void SetTimerText(int value)
     {
         timerText.text=value.ToString();
+    }
+    public void ShowShopBalance()
+    {
+        shopBalance.text=PlayerPrefs.GetInt("score").ToString();
     }
 }
