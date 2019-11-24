@@ -58,6 +58,7 @@
      <Compile Include="Assets\script\ButtonColor.cs" />
      <Compile Include="Assets\script\Car.cs" />
      <Compile Include="Assets\script\CarCrash.cs" />
+     <Compile Include="Assets\script\CarStatement.cs" />
      <Compile Include="Assets\script\MainUi.cs" />
      <Compile Include="Assets\script\Params.cs" />
      <Compile Include="Assets\script\PauseAnimation.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\script\ShopCars.cs" />
      <Compile Include="Assets\script\ShopScrolling.cs" />
      <Compile Include="Assets\script\Spawn.cs" />
+     <Compile Include="Assets\script\SpawnMainCar.cs" />
      <Compile Include="Assets\script\StartGame.cs" />
      <Compile Include="Assets\script\Traffic.cs" />
      <None Include="Assets\PostProcessing-2\PostProcessing\Shaders\Builtins\FinalPass.shader" />

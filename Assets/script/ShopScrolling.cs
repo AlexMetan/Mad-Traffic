@@ -4,7 +4,7 @@ public class ShopScrolling : MonoBehaviour
 {
     [SerializeField] GameObject[] shopCars;
     int currentCar=0;
-    void Start()
+    void Awake()
     {
         DeactivatedAllCars();
         EnableCar();

@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ButtonColor
     - Car
     - CarCrash
+    - CarStatement
     - MainUi
     - PauseAnimation
     - Road
@@ -11,6 +12,7 @@ ScriptsOnlyBuild:
     - ShopCars
     - ShopScrolling
     - Spawn
+    - SpawnMainCar
     - StartGame
     - Traffic
     UnityEditor.TestRunner.dll:
@@ -102,6 +104,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10678}
     - Class: 114
       Script: {instanceID: 10740}
+    - Class: 114
+      Script: {instanceID: 79654}
+    - Class: 114
+      Script: {instanceID: 93990}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -643,7 +649,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 0a1753136ab566887d53e5433a1ce1cf
+      Hash: 26a7bcb6397ebbae84683d417f6e1540
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopCars
@@ -703,7 +709,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: ef6bebaa530c20295c0849989e804160
+      Hash: 5911e016807e4a93cd83dcc9fe88e19c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Car
@@ -733,7 +739,7 @@ ScriptsOnlyBuild:
     className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 9dc39f4c6e6be9eb1dd5d6ea08e009de
+      Hash: 094298f687cb1728fffe31cf5e532b99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CarCrash
@@ -847,7 +853,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: 98336b6b320cf37958d140a9c1360145
+      Hash: 7f6ff3746ffbccd32fd62b36554044ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainUi
@@ -859,7 +865,7 @@ ScriptsOnlyBuild:
     className: Road
   - hash:
       serializedVersion: 2
-      Hash: fe42748d804388aa5d1d8b1f720b430a
+      Hash: a9ab2eecd86aaa1bdfaea5fda7821fd6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shop
@@ -929,6 +935,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a0fc49a34c3cafe4b66fd9ce7baae141
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CarStatement
+  - hash:
+      serializedVersion: 2
+      Hash: 65164aba1389c26d32ae79f303ed8308
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnMainCar
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

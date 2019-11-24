@@ -7,10 +7,11 @@ public class ShopCars : MonoBehaviour
     [SerializeField][Range(0,375)] int[] carConfig;
     [Header("UI")]
     [SerializeField] Image[] carConfigImage;
+    [SerializeField] Button takeButton;
     [Header("GameObject")]
-    [SerializeField] GameObject locked; 
-    [SerializeField] GameObject btnBuy;
-    [SerializeField] GameObject btnTake;
+    [SerializeField] GameObject lockedObj; 
+    [SerializeField] GameObject btnBuyObj;
+    [SerializeField] GameObject btnTakeObj;
     [SerializeField] GameObject priceObj;
     [Header("Value")]
     [SerializeField] int priceValue;
@@ -39,12 +40,15 @@ public class ShopCars : MonoBehaviour
             BuyCarActive(false);
         }
     }
+    void Update() {
+        CheckButtonTake();
+    }
     void BuyCarActive(bool value)
     {
         priceObj.SetActive(value);
-        btnBuy.SetActive(value);
-        locked.SetActive(value);
-        btnTake.SetActive(!value);
+        btnBuyObj.SetActive(value);
+        lockedObj.SetActive(value);
+        btnTakeObj.SetActive(!value);
     }
     public void CarInGarage()
     {
@@ -55,4 +59,11 @@ public class ShopCars : MonoBehaviour
         }
         else carPurchased=false;
     }    
+    void CheckButtonTake()
+    {
+        if(PlayerPrefs.GetInt("currentCar")==carId)
+            takeButton.interactable=false;
+        else 
+             takeButton.interactable=true;
+    }
 }

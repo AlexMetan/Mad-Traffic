@@ -5,14 +5,18 @@ public class Car : MonoBehaviour
     [SerializeField] Transform [] rims;
     [SerializeField] Transform [] frontWheels;
     Transform thisTransform;
-    [SerializeField] int buttonStat;
-    [SerializeField] int torqueStat;
+    [SerializeField] int buttonState;
+    [SerializeField] int torqueState;
     [SerializeField] Transform carTransform;    
     [SerializeField] float maxSpeed;
     [SerializeField] float minZ,maxZ;
     [SerializeField] float currentZ;
     float minSpeed;
     float currentSpeed;
+
+    public int ButtonState { get => buttonState; set => buttonState = value; }
+    public int TorqueState { get => torqueState; set => torqueState = value; }
+
     void Start()
     {
         thisTransform=transform;
@@ -24,10 +28,10 @@ public class Car : MonoBehaviour
         if(!Params.GamePaused)
         {
             RotateWheel();
-            if(buttonStat!=0)
+            if(buttonState!=0)
                 Move();
             Torque();
-            RotateCar(buttonStat);
+            RotateCar(buttonState);
             WheelRotation(-15);
             SetMinMaxSpeed();
             if(!Params.CarCrashed&&!Params.InMenu)
@@ -43,29 +47,19 @@ public class Car : MonoBehaviour
     }
     void Move()
     {
-        currentZ=thisTransform.position.z+buttonStat;
+        currentZ=thisTransform.position.z+buttonState;
         SetMinMaxPositionZ();
         Vector3 newPos= new Vector3(thisTransform.position.x, thisTransform.position.y,currentZ);
         thisTransform.position=Vector3.MoveTowards(thisTransform.position,newPos,12f*Time.deltaTime);
     }
-    public void SetStatement(int value)
-    {
-        if(!Params.BlockMovement)
-            buttonStat=value;
-        else 
-            buttonStat=0;
-    }
-    public void SetStatementTorque(int value)
-    {
-        torqueStat=value;
-    }
+   
     void RotateCar(float angle)
     {
         carTransform.localRotation=Quaternion.RotateTowards(carTransform.localRotation,Quaternion.AngleAxis(angle*5,Vector3.right),20*Time.deltaTime);
     }
     void WheelRotation(float angle)
     {       
-        angle*=buttonStat;     
+        angle*=buttonState;     
         foreach (Transform item in frontWheels)
         {
             item.localRotation=Quaternion.RotateTowards(item.localRotation,Quaternion.AngleAxis(angle,Vector3.up),8);   
@@ -75,9 +69,9 @@ public class Car : MonoBehaviour
     {
         if(!Params.InMenu&&!Params.CarCrashed)
         {
-            if(torqueStat!=0)
+            if(torqueState!=0)
             {
-                currentSpeed+=0.01f*torqueStat;
+                currentSpeed+=0.01f*torqueState;
                 Params.CarSpeed=currentSpeed;
             }
             else 

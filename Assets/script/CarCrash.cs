@@ -3,8 +3,12 @@
 public class CarCrash : MonoBehaviour
 {
     [SerializeField] StartGame startGame;
-    [SerializeField] GameObject spawn;
     [SerializeField] MainUi mainUi;
+    void Start()
+    {
+        startGame=FindObjectOfType<StartGame>().GetComponent<StartGame>();
+        mainUi=FindObjectOfType<MainUi>().GetComponent<MainUi>();
+    }
     
     void OnTriggerEnter(Collider col) 
     {

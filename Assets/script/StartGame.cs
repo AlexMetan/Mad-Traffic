@@ -34,6 +34,16 @@ public class StartGame : MonoBehaviour
         SetTimerActive(false);
         SetPauseButtonActive(true);
     }
+    void Update() {
+        if(car==null)
+        {
+            FindCurrentCar();
+        }
+    }
+    public void FindCurrentCar()
+    {
+        car=GameObject.FindGameObjectWithTag("MainCar").transform;
+    }
     public void CanvasObjectsSetActive(bool menu,bool main,bool crashed)
     {
         menuUI.SetActive(menu);
