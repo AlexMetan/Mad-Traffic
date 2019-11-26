@@ -8,20 +8,22 @@ public class Car : MonoBehaviour
     [SerializeField] int buttonState;
     [SerializeField] int torqueState;
     [SerializeField] Transform carTransform;    
-    [SerializeField] float maxSpeed;
+    float maxSpeed;
     [SerializeField] float minZ,maxZ;
     [SerializeField] float currentZ;
     float minSpeed;
     float currentSpeed;
-
+    int carId;
     public int ButtonState { get => buttonState; set => buttonState = value; }
     public int TorqueState { get => torqueState; set => torqueState = value; }
 
     void Start()
     {
+        carId=PlayerPrefs.GetInt("currentCar");
         thisTransform=transform;
         minSpeed=Params.CarSpeed;
         currentSpeed=Params.CarSpeed;
+        maxSpeed=0.65f+Params.CarConfig[carId,0]*0.1f;
     }
     void Update()
     {
@@ -50,9 +52,8 @@ public class Car : MonoBehaviour
         currentZ=thisTransform.position.z+buttonState;
         SetMinMaxPositionZ();
         Vector3 newPos= new Vector3(thisTransform.position.x, thisTransform.position.y,currentZ);
-        thisTransform.position=Vector3.MoveTowards(thisTransform.position,newPos,12f*Time.deltaTime);
+        thisTransform.position=Vector3.MoveTowards(thisTransform.position,newPos,12f*Time.deltaTime*Params.CarConfig[carId,1]*0.17f);//handling
     }
-   
     void RotateCar(float angle)
     {
         carTransform.localRotation=Quaternion.RotateTowards(carTransform.localRotation,Quaternion.AngleAxis(angle*5,Vector3.right),20*Time.deltaTime);
@@ -71,7 +72,13 @@ public class Car : MonoBehaviour
         {
             if(torqueState!=0)
             {
-                currentSpeed+=0.01f*torqueState;
+                float coef;
+                if(torqueState>0)
+                    coef=Params.CarConfig[carId,0]*0.1f;
+                else 
+                    coef=Params.CarConfig[carId,2]*0.05f;
+
+                currentSpeed+=0.01f*torqueState*coef;
                 Params.CarSpeed=currentSpeed;
             }
             else 

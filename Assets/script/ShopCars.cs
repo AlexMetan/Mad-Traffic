@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class ShopCars : MonoBehaviour
 {
-    [Header("Car Config")]
-    [SerializeField][Range(0,375)] int[] carConfig;
+    int[] carConfig;
     [Header("UI")]
     [SerializeField] Image[] carConfigImage;
     [SerializeField] Button takeButton;
@@ -17,21 +16,15 @@ public class ShopCars : MonoBehaviour
     [SerializeField] int priceValue;
     [SerializeField] int carId;
     int currentMoney;
-    
     [SerializeField] bool carPurchased;
     void Start()
     {
-        SetConfig();
+        int configLength= Params.CarConfig.GetLength(0);
+        carConfig= new int[configLength];
+        SetConfigUi();
         if(carId!=0)
             CarInGarage();
         CarLock();
-    }
-    void SetConfig()
-    {
-        for(int i=0;i<carConfig.Length;i++)
-        {
-            carConfigImage[i].GetComponent<RectTransform>().sizeDelta=new Vector2(carConfig[i],20);
-        }
     }
     public void CarLock()
     {
@@ -65,5 +58,13 @@ public class ShopCars : MonoBehaviour
             takeButton.interactable=false;
         else 
              takeButton.interactable=true;
+    }
+    void SetConfigUi()
+    {
+        for(int i=0;i<carConfig.Length;i++)
+        {
+            carConfig[i]=Params.CarConfig[carId,i]*35;
+            carConfigImage[i].GetComponent<RectTransform>().sizeDelta=new Vector2(carConfig[i],20);
+        }
     }
 }

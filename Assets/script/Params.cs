@@ -8,6 +8,7 @@
     private static bool blockMovement;
     private static bool gamePaused=false;
     private static int[] carPrice={0,5000,10000};
+    private static int[,] carConfig={{3,4,4},{4,7,9},{7,9,5}};//1-10(min-max) speed handling braking
     public static float CarSpeed { get => carSpeed; set => carSpeed = value; }
     public static float DistanceKm { get => distanceKm; set => distanceKm = value; }
     public static float DefSpeed { get => defSpeed; set => defSpeed = value; }
@@ -16,6 +17,7 @@
     public static bool BlockMovement { get => blockMovement; set => blockMovement = value; }
     public static bool GamePaused { get => gamePaused; set => gamePaused = value; }
     public static int[] CarPrice { get => carPrice; set => carPrice = value; }
+    public static int[,] CarConfig { get => carConfig; set => carConfig = value; }
 
     public static float GetSpeed()
     {

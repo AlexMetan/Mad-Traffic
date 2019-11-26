@@ -89,25 +89,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9804}
     - Class: 114
-      Script: {instanceID: 10046}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 10108}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10110}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10402}
     - Class: 114
-      Script: {instanceID: 10574}
+      Script: {instanceID: 10440}
     - Class: 114
-      Script: {instanceID: 10678}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 10740}
+      Script: {instanceID: 10578}
     - Class: 114
-      Script: {instanceID: 79654}
+      Script: {instanceID: 10682}
     - Class: 114
-      Script: {instanceID: 93990}
+      Script: {instanceID: 10744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -649,7 +649,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 26a7bcb6397ebbae84683d417f6e1540
+      Hash: b987d2f0a6f414677010c5c37b0ecff5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShopCars
@@ -691,6 +691,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 65164aba1389c26d32ae79f303ed8308
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnMainCar
+  - hash:
+      serializedVersion: 2
       Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -709,7 +715,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 5911e016807e4a93cd83dcc9fe88e19c
+      Hash: 13487796743a3e7f94259a6d2dcaf3a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Car
@@ -761,6 +767,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: a0fc49a34c3cafe4b66fd9ce7baae141
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CarStatement
   - hash:
       serializedVersion: 2
       Hash: 35a9693c388776aaf487636491a20f11
@@ -935,18 +947,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: a0fc49a34c3cafe4b66fd9ce7baae141
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CarStatement
-  - hash:
-      serializedVersion: 2
-      Hash: 65164aba1389c26d32ae79f303ed8308
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnMainCar
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
