@@ -745,7 +745,7 @@ ScriptsOnlyBuild:
     className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 094298f687cb1728fffe31cf5e532b99
+      Hash: b5894863a3fd0f021cf1444d4d9ebb86
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CarCrash

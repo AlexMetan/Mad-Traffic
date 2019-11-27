@@ -4,8 +4,10 @@ public class CarCrash : MonoBehaviour
 {
     [SerializeField] StartGame startGame;
     [SerializeField] MainUi mainUi;
+    [SerializeField] Car car;
     void Start()
     {
+        car=FindObjectOfType<Car>().GetComponent<Car>();
         startGame=FindObjectOfType<StartGame>().GetComponent<StartGame>();
         mainUi=FindObjectOfType<MainUi>().GetComponent<MainUi>();
     }
@@ -14,6 +16,7 @@ public class CarCrash : MonoBehaviour
     {
         if(col.transform.gameObject.tag=="Traffic Car")
         {
+            car.ResetBTNState();
             SaveBestDistance();
             startGame.CanvasObjectsSetActive(false,false,true);
             Params.CarCrashed=true;

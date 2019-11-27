@@ -34,6 +34,7 @@ public class Car : MonoBehaviour
                 Move();
             Torque();
             RotateCar(buttonState);
+            RotateFullCar(-buttonState);
             WheelRotation(-15);
             SetMinMaxSpeed();
             if(!Params.CarCrashed&&!Params.InMenu)
@@ -57,6 +58,10 @@ public class Car : MonoBehaviour
     void RotateCar(float angle)
     {
         carTransform.localRotation=Quaternion.RotateTowards(carTransform.localRotation,Quaternion.AngleAxis(angle*5,Vector3.right),20*Time.deltaTime);
+    }
+    void RotateFullCar(float angle)
+    {
+        thisTransform.localRotation=Quaternion.RotateTowards(thisTransform.localRotation,Quaternion.AngleAxis(angle*5,Vector3.up),60*Time.deltaTime);
     }
     void WheelRotation(float angle)
     {       
@@ -104,5 +109,10 @@ public class Car : MonoBehaviour
     void SetDistance()
     {
         Params.DistanceKm+=Params.GetSpeed()*0.00001f;
+    }
+    public void ResetBTNState()
+    {
+        torqueState=0;
+        buttonState=0;
     }
 }

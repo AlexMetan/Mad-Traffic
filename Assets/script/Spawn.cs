@@ -26,7 +26,7 @@ public class Spawn : MonoBehaviour
     {
         int randPos = Random.Range(0,trafficPositionsZ.Length);
         int randPrefab = Random.Range(0,trafficPrefab.Length);
-        Vector3 trafficStartPosition = new Vector3(100,0,trafficPositionsZ[randPos]);
+        Vector3 trafficStartPosition = new Vector3(200,0,trafficPositionsZ[randPos]);
         GameObject carTraffic=Instantiate(trafficPrefab[randPrefab],trafficStartPosition,Quaternion.identity,thisTransorm);
         trafficList.Add(carTraffic);
     }
